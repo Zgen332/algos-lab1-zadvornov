@@ -1,3 +1,4 @@
+import math
 """
  _____         _      __  
 |_   _|       | |    /  | 
@@ -74,12 +75,16 @@ hint: https://ru.wikihow.com/%D0%B2%D1%8B%D1%81%D1%87%D0%B8%D1%82%D1%8B%D0%B2%D0
 hint: https://letpy.com/handbook/builtins/reversed/
 """
 
+#x = input('Введите слово или число:')
+# y = ""
+# for i in reversed(x):
+#     y += i
+# print(y)
+# if y == x:
+#     print("Палиндром")
+# else:
+#     print("Не палиндром")
 
-x = list(input("Введите слово или число: "))
-y = list(reversed(x))
-print(y)
-if x == y:
-  print("Полиндром+")
 """
  _____         _      _____ 
 |_   _|       | |    |  ___|
@@ -93,7 +98,9 @@ if x == y:
 hint: https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B0%D0%BB
 """
 
-# Замените это своим кодом
+# x = int(input('Введите число: '))
+# result = math.factorial(x)
+# print(result)
 
 """
  _____         _       ____ 
@@ -109,7 +116,13 @@ hint: x <= 1 - не простые числа
 hint 2: %
 """
 
-# Замените это своим кодом
+# x = int(input('Введите число: '))
+# if x <= 1:
+#     print('НЕпростое число')
+# elif x % 1 == 0 and x % x == 0:
+#     print('Простое число')
+# else:
+#     print('Ошибка')
 
 """
  _____         _      ______
@@ -124,7 +137,22 @@ hint 2: %
 hint: циклы
 """
 
-# Замените это своим кодом
+# def sum_of_digits(n):
+#     n = abs(n)  
+#     t_sum = 0  
+#     while n > 0:
+#         digit = n % 10 
+#         t_sum += digit 
+#         n //= 10  
+#     return t_sum
+
+# number = int(input("Введите число: "))
+# result = sum_of_digits(number)
+
+# print(f"Сумма всех цифр числа {number} равна {result}.")
+
+
+
 
 """
  _____         _      _____ 
@@ -140,8 +168,14 @@ hint: 1, 1, 2, 3 https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%B0_%D
 hint 2: попробуйте решить с помощью рекурсии
 """
 
-# Замените это своим кодом
-
-
-
+def fibonacci_until(max_value):
+    fib_sequence = []
+    a, b = 0, 1
+    while a <= max_value:
+        fib_sequence.append(a)
+        a, b = b, a + b
+    return fib_sequence
+max_value = int(input("Введите максимальное значение для последовательности Фибоначчи: "))
+fib_sequence = fibonacci_until(max_value)
+print(f"Последовательность Фибоначчи до {max_value}: {fib_sequence}")
 
